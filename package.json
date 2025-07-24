@@ -1,5 +1,5 @@
 {
-  "name": "dropdown-menu",
+  "name": "image-carousel-feature",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/umersaif11/DropDown-Menu.git"
+    "url": "git+https://github.com/umersaif11/image-carousel-feature.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/umersaif11/DropDown-Menu/issues"
+    "url": "https://github.com/umersaif11/image-carousel-feature/issues"
   },
-  "homepage": "https://github.com/umersaif11/DropDown-Menu#readme",
+  "homepage": "https://github.com/umersaif11/image-carousel-feature#readme",
   "devDependencies": {
     "@eslint/js": "^9.31.0",
     "css-loader": "^7.1.2",
