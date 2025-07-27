@@ -22,3 +22,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+.slider-dimensions{
+  width: min(100vw, 720px);
+  aspect-ratio: 3 / 2;
+}
