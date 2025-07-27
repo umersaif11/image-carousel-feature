@@ -6,16 +6,12 @@
   padding: 0;
 }
 
-html,
-body {
-  height: 100%;
-  overflow: hidden;
-}
-
 body {
   font-family: 'Lumanosimo';
   background-color:antiquewhite;
   margin: 0;
+}
+main{
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -25,4 +21,20 @@ body {
 .slider-dimensions{
   width: min(100vw, 720px);
   aspect-ratio: 3 / 2;
+}
+.slider-container{
+  position: relative;
+  overflow: hidden;
+  background-color: lightgray;
+}
+.slider{
+  position: absolute;
+  display: flex;
+  transform: translateX(-0%);
+  transition: transform 1s;
+}
+.slider > div{
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
