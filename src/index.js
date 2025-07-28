@@ -7,13 +7,13 @@ images.forEach((div) => {
     div.style.backgroundImage = `url(${div.getAttribute('data-img-url')})`;
 });
 const slider = document.querySelector(".slider");
-const indexButtons = document.querySelectorAll(".nav-container > button");
+const indexButtons = document.querySelectorAll(".index-container > button");
 const arrowButtons = document.querySelectorAll("[data-index-change]");
 let currIndex = 0;
 
 function slide(nextIndex){
     if(nextIndex < 0) nextIndex = images.length - 1;
-    if(nextIndex > images.length - 1) nextIndex = 0;
+    if(nextIndex >= images.length) nextIndex = 0;
     indexButtons[currIndex].style.backgroundColor = "";
     indexButtons[nextIndex].style.backgroundColor = "white";
 
@@ -27,6 +27,24 @@ function slide(nextIndex){
 indexButtons.forEach((button, index) => {
     button.addEventListener("click", () => {
         slide(index);
-    })
-})
+    });
+});
 
+arrowButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const indexChange = +button.getAttribute("data-index-change");
+        slide(currIndex + indexChange);
+    });
+});
+
+const navContainer = document.querySelector(".nav-container");
+let id;
+let isSliding =  false;
+
+function startAutoSlide() {
+    if(!isSliding){
+        id = setInterval(() => slide(currIndex + 1), 3000);
+        isSliding = true;
+    }
+}
+startAutoSlide();
