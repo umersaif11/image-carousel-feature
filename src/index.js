@@ -52,3 +52,5 @@ function stopAutoSlide(){
     clearInterval(id);
     isSliding = false;
 }
+navContainer.addEventListener("mouseover", () => stopAutoSlide());
+navContainer.addEventListener("mouseout", () => startAutoSlide());
