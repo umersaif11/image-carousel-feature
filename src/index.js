@@ -48,3 +48,7 @@ function startAutoSlide() {
     }
 }
 startAutoSlide();
+function stopAutoSlide(){
+    clearInterval(id);
+    isSliding = false;
+}
